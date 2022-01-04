@@ -1,0 +1,22 @@
+.navbar {
+	width: 100%;
+	height: 50px;
+	box-shadow: rgba(0, 0, 0, 0.274) 0px 2px 10px;
+}
+
+.navbar-links {
+	width: 60%;
+	margin: auto;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.dropdown-toggle::after {
+	content: none;
+}
+span {
+	color: #000;
+	text-decoration: none;
+}
