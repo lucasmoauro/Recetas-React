@@ -16,7 +16,16 @@
 .dropdown-toggle::after {
 	content: none;
 }
-span {
+.nav-links {
 	color: #000;
 	text-decoration: none;
+	&:hover {
+		color: #000;
+	}
+}
+.dropdown-item {
+	&:first-child {
+		border-bottom: #000 solid 1px;
+
+	}
 }

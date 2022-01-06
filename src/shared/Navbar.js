@@ -1,38 +1,32 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/navbar.scss";
 
 export const Navbar = () => {
-	const [show, setShow] = useState(false);
-
-	const handleEnter = () => {
-		setShow(true);
-	};
-
 	return (
 		<nav className="navbar">
 			<ul className="navbar-links">
-				<li class="nav-item dropdown">
+				<li className="nav-item dropdown">
 					<span
-						class="dropdown-toggle"
+						className="dropdown-toggle"
 						id="navbarDropdown"
 						role="button"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
-						onMouseOver={() => handleEnter}
 					>
 						Pasteleria
 					</span>
-					<ul
-						class={show ? "dropdown-menu show" : "dropdown-menu"}
-						aria-labelledby="navbarDropdown"
-					>
-						<li class="dropdown-item">Pasteleria Basica</li>
-						<li class="dropdown-item"> Pasteleria Avanzada</li>
+					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+						<Link className="dropdown-item" to="/pasteleria-basica">
+							Pasteleria Basica
+						</Link>
+						<Link className="dropdown-item" to="/pasteleria-avanzada">
+							Pasteleria Avanzada
+						</Link>
 					</ul>
 				</li>
-				<li class="nav-item dropdown">
+				<li className="nav-item dropdown">
 					<span
-						class="dropdown-toggle"
+						className="dropdown-toggle"
 						id="navbarDropdown"
 						role="button"
 						data-bs-toggle="dropdown"
@@ -40,12 +34,18 @@ export const Navbar = () => {
 					>
 						Panaderia
 					</span>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li class="dropdown-item">Panaderia</li>
-						<li class="dropdown-item">Viennoiserie</li>
+					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+						<Link className="dropdown-item" to="/panaderia">
+							Panaderia
+						</Link>
+						<Link className="dropdown-item" to="/viennoiserie">
+							Viennoiserie
+						</Link>
 					</ul>
 				</li>
-				<li>Chocolateria</li>
+				<Link to="/chocolateria" className="nav-links">
+					Chocolateria
+				</Link>
 			</ul>
 		</nav>
 	);
