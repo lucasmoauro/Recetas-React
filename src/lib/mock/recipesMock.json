@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Galletas",
+        "description": "Galletas de chocolate",
+        "image": "asd"
+    },
+    {
+        "title": "torta",
+        "description": "torta de chocolate",
+        "image": "asd"
+    },
+    {
+        "title": "pan",
+        "description": "pan de chocolate",
+        "image": "asd"
+    },
+    {
+        "title": "pastel",
+        "description": "pastel de chocolate",
+        "image": "asd"
+    },
+    {
+        "title": "helado",
+        "description": "helado de chocolate",
+        "image": "asd"
+    },
+    {
+        "title": "facturas",
+        "description": "facturas de chocolate",
+        "image": "asd"
+    }
+]
