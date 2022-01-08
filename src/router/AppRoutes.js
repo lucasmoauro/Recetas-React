@@ -13,19 +13,7 @@ export const AppRoutes = () => {
 	return (
 		<Suspense fallback={<Loader />}>
 			<Routes>
-				<Route
-					exact
-					path="/pasteleria-basica"
-					element={<RecipesListScreen />}
-				/>
-				<Route
-					exact
-					path="/pasteleria-avanzada"
-					element={<RecipesListScreen />}
-				/>
-				<Route exact path="/chocolateria" element={<RecipesListScreen />} />
-				<Route exact path="/panaderia" element={<RecipesListScreen />} />
-				<Route exact path="/viennoiserie" element={<RecipesListScreen />} />
+				<Route exact path="/recetas/:id" element={<RecipesListScreen />} />
 				<Route exact path="/receta/:id" element={<RecipeScreen />} />
 				<Route path="/" element={<HomeScreen />} />
 			</Routes>

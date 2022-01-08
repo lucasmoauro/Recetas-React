@@ -16,34 +16,19 @@ export const Navbar = () => {
 						Pasteleria
 					</span>
 					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-						<Link className="dropdown-item" to="/pasteleria-basica">
+						<Link className="dropdown-item" to="/recetas/pasteleria-basica">
 							Pasteleria Basica
 						</Link>
-						<Link className="dropdown-item" to="/pasteleria-avanzada">
+						<Link className="dropdown-item" to="/recetas/pasteleria-avanzada">
 							Pasteleria Avanzada
 						</Link>
 					</ul>
 				</li>
-				<li className="nav-item dropdown">
-					<span
-						className="dropdown-toggle"
-						id="navbarDropdown"
-						role="button"
-						data-bs-toggle="dropdown"
-						aria-expanded="false"
-					>
-						Panaderia
-					</span>
-					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-						<Link className="dropdown-item" to="/panaderia">
-							Panaderia
-						</Link>
-						<Link className="dropdown-item" to="/viennoiserie">
-							Viennoiserie
-						</Link>
-					</ul>
-				</li>
-				<Link to="/chocolateria" className="nav-links">
+				<Link className="nav-links" to="/recetas/panaderia">
+					Panaderia
+				</Link>
+
+				<Link to="/recetas/chocolateria" className="nav-links">
 					Chocolateria
 				</Link>
 			</ul>
