@@ -8,7 +8,6 @@ const RecipesListScreen = () => {
 	const [recipes, setRecipes] = useState([]);
 
 	const { id } = useParams();
-	console.log(id);
 
 	useEffect(() => {
 		getRecipeCategory(id).then((data) => {

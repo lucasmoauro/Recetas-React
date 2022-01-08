@@ -1,17 +1,26 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getRecipe } from "../../firebase/firebaseService";
 import "../../styles/recipe.scss";
 
 const RecipeScreen = () => {
-	
+	const [recipe, setRecipe] = useState({});
+	const { id } = useParams();
+
+	useEffect(() => {
+		getRecipe(id).then((data) => {
+			setRecipe(data);
+		});
+	}, [id]);
+
 	return (
 		<div className="recipe-container">
 			<div className="recipe">
-				<h1 className="recipe-title">Recipe Screen</h1>
+				<h1 className="recipe-title">{recipe.title}</h1>
 
-				<img
-					style={{ maxWidth: "80%" }}
-					src="https://res.cloudinary.com/dw33r7aul/image/upload/v1641524630/Recetas-React/Chocolateria/Almendras-al-chocolate.pdf/Almendras-al-chocolate.pdf-1_rq0zz8.png"
-					alt=""
-				/>
+				{recipe.image?.map((img, i) => {
+					return <img key={i} className="recipe-image" src={img} alt="" />;
+				})}
 			</div>
 		</div>
 	);
