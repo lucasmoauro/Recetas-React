@@ -1,7 +1,7 @@
 import data from "../lib/mock/recipesMock.json";
 import "../styles/recipeCards.scss";
 
-export const HomeScreen = () => {
+const HomeScreen = () => {
 	return (
 		<div className="card-container">
 			{data.map((recipe, i) => {
@@ -15,3 +15,6 @@ export const HomeScreen = () => {
 		</div>
 	);
 };
+
+
+export default HomeScreen;
