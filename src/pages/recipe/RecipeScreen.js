@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Loading } from "../../components/Loader/Loading";
 import { getRecipe } from "../../firebase/firebaseService";
-import goBack from "../../assets/images/reply-solid.svg";
 import "../../styles/recipe.scss";
 
 const RecipeScreen = () => {
@@ -11,11 +10,10 @@ const RecipeScreen = () => {
 
 	const { id } = useParams();
 	const navigate = useNavigate();
-	
 
 	const handleBack = () => {
-		navigate(-1)
-	}
+		navigate(-1);
+	};
 
 	useEffect(() => {
 		setloading(true);
@@ -27,9 +25,9 @@ const RecipeScreen = () => {
 
 	return (
 		<div className="animate__animated animate__fadeIn">
-			<span className="btn btn-danger btn-back" onClick={handleBack}>
-				<img src={goBack} alt="" />
-			</span>
+			<button className="btn btn-danger btn-back" onClick={handleBack}>
+				Volver
+			</button>
 
 			<div className="recipe-container">
 				{loading ? (
