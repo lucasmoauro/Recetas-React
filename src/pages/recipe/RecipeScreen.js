@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Loading } from "../../components/Loader/Loading";
 import { getRecipe } from "../../firebase/firebaseService";
+import goBack from "../../assets/images/reply-solid.svg";
 import "../../styles/recipe.scss";
 
 const RecipeScreen = () => {
@@ -9,6 +10,12 @@ const RecipeScreen = () => {
 	const [loading, setloading] = useState(true);
 
 	const { id } = useParams();
+	const navigate = useNavigate();
+	
+
+	const handleBack = () => {
+		navigate(-1)
+	}
 
 	useEffect(() => {
 		setloading(true);
@@ -19,18 +26,24 @@ const RecipeScreen = () => {
 	}, [id]);
 
 	return (
-		<div className="recipe-container">
-			{loading ? (
-			<Loading />
-			) : (
-				<div className="recipe">
-					<h1 className="recipe-title">{recipe.title}</h1>
+		<div className="animate__animated animate__fadeIn">
+			<span className="btn btn-danger btn-back" onClick={handleBack}>
+				<img src={goBack} alt="" />
+			</span>
 
-					{recipe.image?.map((img, i) => {
-						return <img key={i} className="recipe-image" src={img} alt="" />;
-					})}
-				</div>
-			)}
+			<div className="recipe-container">
+				{loading ? (
+					<Loading />
+				) : (
+					<div className="recipe">
+						<h1 className="recipe-title">{recipe.title}</h1>
+
+						{recipe.image?.map((img, i) => {
+							return <img key={i} className="recipe-image" src={img} alt="" />;
+						})}
+					</div>
+				)}
+			</div>
 		</div>
 	);
 };

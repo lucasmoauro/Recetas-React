@@ -1,13 +1,26 @@
+@import "./variables.scss";
+
 .to-top {
+	position: fixed;
 	height: 50px;
 	width: 50px;
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
+	bottom: 20px;
+	right: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.219) 0 3px 7px, rgba(0, 0, 0, 0.089) 0 2px 5px;
+	background-color: #fff;
+
+	@media screen and (min-width: $medium){
+		bottom: 30px;
+		right: 30px;
+	}
+
+	@media screen and (min-width: $x-large) {
+		bottom: 50px;
+		right: 50px;
+	}
 }
