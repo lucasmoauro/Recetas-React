@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Loader } from "../components/Loader/Loader";
+import { Loading } from "../components/Loader/Loading";
 
 //Lazy loading of components
 const HomeScreen = lazy(() => import("../home/HomeScreen"));
@@ -11,7 +11,7 @@ const RecipesListScreen = lazy(() =>
 
 export const AppRoutes = () => {
 	return (
-		<Suspense fallback={<Loader />}>
+		<Suspense fallback={<Loading />}>
 			<Routes>
 				<Route exact path="/recetas/:id" element={<RecipesListScreen />} />
 				<Route exact path="/receta/:id" element={<RecipeScreen />} />
