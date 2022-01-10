@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap");
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+a, span{
+	font-family: "Roboto", sans-serif;
+}
 
-body{
+
+body {
 	background-color: rgb(245, 245, 245);
 }

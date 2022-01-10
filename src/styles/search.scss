@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.search-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+
+	width: 100%;
+	top: 1.5rem;
+
+
+    @media screen and (min-width: $large) {
+       top: 5rem;
+       width: 60%;
+    }
+    
+	@media screen and (min-width: $x-large) {
+        top: 5.5rem;
+        width: 20%;
+		height: 2rem;
+	}
+}
+
+.search {
+	width: 50%;
+	border: none;
+	outline: none;
+	color: #000;
+	text-align: center;
+	margin: auto;
+	box-shadow: rgba(0, 0, 0, 0.226) 2px 2px 4px, rgba(0, 0, 0, 0.26) 4px 4px 6px;
+	border-radius: 5px;
+
+	@media screen and (min-width: $x-large) {
+		font-size: 1.2rem;
+		width: 100%;
+		height: 100%;
+	}
+}
