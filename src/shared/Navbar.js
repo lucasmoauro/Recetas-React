@@ -43,20 +43,36 @@ export const Navbar = () => {
 					</li>
 				) : (
 					<>
-						<Link className="nav-links" to="/recetas/pasteleria-basica">
+						<Link
+							className="nav-links"
+							to="/recetas/pasteleria-basica"
+							onClick={handleClose}
+						>
 							Pasteleria Basica
 						</Link>
-						<Link className="nav-links" to="/recetas/pasteleria-avanzada">
+						<Link
+							className="nav-links"
+							to="/recetas/pasteleria-avanzada"
+							onClick={handleClose}
+						>
 							Pasteleria Avanzada
 						</Link>
 					</>
 				)}
 
-				<Link className="nav-links" to="/recetas/panaderia">
+				<Link
+					className="nav-links"
+					to="/recetas/panaderia"
+					onClick={handleClose}
+				>
 					Panaderia
 				</Link>
 
-				<Link to="/recetas/chocolateria" className="nav-links">
+				<Link
+					to="/recetas/chocolateria"
+					className="nav-links"
+					onClick={handleClose}
+				>
 					Chocolateria
 				</Link>
 			</ul>
