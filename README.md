@@ -1,12 +1,12 @@
 # Recetas-React
 
-**Otra versión de App de Recetas, esta vez hecha con React, Firebase y Sass.**
+**Another version of Recipes App, this time made it with React, Firebase y Sass.**
 
 <br>
 
 
 ---
-## Librerias
+## Libraries
 
 * React
 * React Router Dom
