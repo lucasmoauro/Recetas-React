@@ -5,13 +5,19 @@ import { Navbar } from "./shared/Navbar";
 import { ToTop } from "./shared/ToTop";
 
 import "animate.css";
-import { RecipeContext } from "./context/RecipeContext";
+import {  RecipeContext } from "./context/RecipeContext";
 
 function App() {
+
+
+
+
+
+
 	return (
 		<BrowserRouter>
-			<Navbar />
 			<RecipeContext>
+			<Navbar />
 				<AppRoutes />
 			</RecipeContext>
 			<ToTop />

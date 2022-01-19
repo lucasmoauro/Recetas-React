@@ -9,15 +9,14 @@
 	width: 100%;
 	top: 1.5rem;
 
+	@media screen and (min-width: $large) {
+		top: 5rem;
+		width: 60%;
+	}
 
-    @media screen and (min-width: $large) {
-       top: 5rem;
-       width: 60%;
-    }
-    
 	@media screen and (min-width: $x-large) {
-        top: 5.5rem;
-        width: 20%;
+		top: 5.5rem;
+		width: 20%;
 		height: 2rem;
 	}
 }
@@ -26,11 +25,32 @@
 	width: 50%;
 	border: none;
 	outline: none;
-	color: #000;
 	text-align: center;
 	margin: auto;
-	box-shadow: rgba(0, 0, 0, 0.226) 2px 2px 4px, rgba(0, 0, 0, 0.26) 4px 4px 6px;
 	border-radius: 5px;
+	
+	&-light {
+		color: #000;
+		box-shadow: rgba(0, 0, 0, 0.226) 2px 2px 4px,
+			rgba(0, 0, 0, 0.26) 4px 4px 6px;
+		background-color: #fafafa;
+		transition: all 0.75s ease-in-out;
+	}
+	&-dark {
+		color: darkgoldenrod;
+		box-shadow: rgba(0, 0, 0, 0.733) 2px 2px 4px,
+			rgba(0, 0, 0, 0.575) 4px 4px 2px;
+		background-color: lighten($color: #080a1b, $amount: 3%);
+		transition: all .75s ease-in-out;
+
+		&:focus{
+			box-shadow: rgba(184, 115, 11, 0.548) 2px 2px 4px,
+			rgba(184, 115, 11, 0.158) 4px 4px 4px;
+			transition: all .5s ease-in-out;
+			caret-color: darkgoldenrod;
+			
+		}
+	}
 
 	@media screen and (min-width: $x-large) {
 		font-size: 1.2rem;

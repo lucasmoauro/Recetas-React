@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a, span{
+	font-family: "Roboto", sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+
+.body{
+    &-light{
+        background-color: #fafafa;
+        transition: all .75s ease-in-out;
+    }
+    &-dark{
+        background-color: #080a1b;
+        transition: all .75s ease-in-out;
+    }
+}

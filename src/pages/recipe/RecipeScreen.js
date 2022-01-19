@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Loading } from "../../components/Loader/Loading";
+import { context } from "../../context/RecipeContext";
 import { getRecipe } from "../../firebase/firebaseService";
 import "../../styles/recipe.scss";
 
 const RecipeScreen = () => {
+	const { isLight } = useContext(context);
 	const [recipe, setRecipe] = useState({});
 	const [loading, setloading] = useState(true);
 
@@ -34,7 +36,13 @@ const RecipeScreen = () => {
 					<Loading />
 				) : (
 					<div className="recipe">
-						<h1 className="recipe-title">{recipe.title}</h1>
+						<h1
+							className={`recipe-title ${
+								isLight ? "recipe-title-light" : "recipe-title-dark"
+							}`}
+						>
+							{recipe.title}
+						</h1>
 
 						{recipe.image?.map((img, i) => {
 							return <img key={i} className="recipe-image" src={img} alt="" />;

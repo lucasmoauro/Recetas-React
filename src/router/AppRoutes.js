@@ -1,6 +1,7 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Loading } from "../components/Loader/Loading";
+import { context } from "../context/RecipeContext";
 
 const HomeScreen = lazy(() => import("../home/HomeScreen"));
 const RecipeScreen = lazy(() => import("../pages/recipe/RecipeScreen"));
@@ -9,6 +10,16 @@ const RecipesListScreen = lazy(() =>
 );
 
 export const AppRoutes = () => {
+	const { setIsLight } = useContext(context);
+
+	useEffect(() => {
+		if (!localStorage.getItem("theme")) {
+			setIsLight(true);
+		} else {
+			setIsLight(JSON.parse(localStorage.getItem("theme")));
+		}
+	}, []);
+
 	return (
 		<Suspense fallback={<Loading />}>
 			<Routes>

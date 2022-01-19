@@ -4,7 +4,7 @@ import { context } from "../../context/RecipeContext";
 import "../../styles/search.scss";
 
 export const Search = () => {
-	const { setSearch } = useContext(context);
+	const { setSearch, isLight } = useContext(context);
 
 	const { id } = useParams();
 
@@ -24,7 +24,7 @@ export const Search = () => {
 				type="text"
 				name="search"
 				id="search"
-				className="search"
+				className={`search ${ isLight ? "search-light" : "search-dark"}`}
 				placeholder="Buscar receta..."
 				autoComplete="off"
 				onChange={handleChange}

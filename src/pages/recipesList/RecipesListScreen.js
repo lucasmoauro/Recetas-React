@@ -8,7 +8,7 @@ import { getRecipeCategory } from "../../firebase/firebaseService";
 import "../../styles/recipeCards.scss";
 
 const RecipesListScreen = () => {
-	const { recipes, setRecipes, search } = useContext(context);
+	const { recipes, setRecipes, search, isLight } = useContext(context);
 	const [loading, setLoading] = useState(true);
 
 	const { id } = useParams();
@@ -34,7 +34,7 @@ const RecipesListScreen = () => {
 				filteredRecipes.map((recipe, i) => {
 					return (
 						<Link
-							className="card animate__animated animate__fadeIn"
+							className={`card animate__animated animate__fadeIn ${isLight ? "card-light" : "card-dark"}`}
 							key={i}
 							to={`/receta/${recipe.id}`}
 						>

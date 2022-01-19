@@ -17,6 +17,15 @@
 	margin-bottom: 2rem;
 	font-size: 1.4rem;
 
+	&-light {
+		color: #000;
+		transition: color 0.75s ease-in-out;
+	}
+	&-dark {
+		color: darken($color: #fff, $amount: 20%);
+		transition: color 0.75s ease-in-out;
+	}
+
 	@media screen and (min-width: $medium) {
 		font-size: 2.5rem;
 	}
