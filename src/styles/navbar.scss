@@ -19,7 +19,7 @@
 	}
 
 	&-dark {
-		background-color: lighten($color: #080a1b, $amount: 5%) ;
+		background-color: lighten($color: #080a1b, $amount: 5%);
 		transition: all 0.75s ease-in-out;
 	}
 
@@ -69,7 +69,13 @@
 	content: none;
 }
 .dropdown-menu {
-	display: none;
+	padding: 0;
+	&-light {
+		background-color: #ececec;
+	}
+	&-dark {
+		background-color: lighten($color: #080a1b, $amount: 5%);
+	}
 }
 .nav-links {
 	text-decoration: none;
@@ -100,6 +106,25 @@
 }
 
 .dropdown-item {
+	padding: .5rem 1rem;
+
+	&:last-child{
+		border-radius: 0 0 10px 10px;
+	}
+	&-light {
+		background-color: #ececec;
+		color: #000;
+		transition: all 0.75s ease-in-out;
+		&:hover {
+			background-color: darken(#ececec, 10%);
+			color: #000;
+		}
+	}
+	&-dark {
+		background-color: lighten($color: #080a1b, $amount: 5%);
+		color: #fff;
+
+	}
 	&:first-child {
 		border-bottom: #000 solid 1px;
 	}
@@ -132,22 +157,16 @@
 	}
 }
 
-.close-icon{
+.close-icon {
 	top: -46.5%;
 }
 
-
-.theme-switch{
-
+.theme-switch {
 	filter: drop-shadow(rgba(27, 27, 27, 0.384) 0px 1px 1px);
 
-
 	@media screen and (min-width: $large) {
-		
 		position: absolute;
 		right: 7rem;
 		top: 1rem;
-
-		
 	}
 }

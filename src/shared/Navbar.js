@@ -62,11 +62,26 @@ export const Navbar = () => {
 						>
 							Pasteleria
 						</span>
-						<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-							<Link className="dropdown-item" to="/recetas/pasteleria-basica">
+						<ul
+							className={`dropdown-menu ${
+								isLight ? "dropdown-menu-light" : "dropdown-menu-dark"
+							}`}
+							aria-labelledby="navbarDropdown"
+						>
+							<Link
+								className={`dropdown-item ${
+									isLight ? "dropdown-item-light" : "dropdown-item-dark"
+								}`}
+								to="/recetas/pasteleria-basica"
+							>
 								Pasteleria Basica
 							</Link>
-							<Link className="dropdown-item" to="/recetas/pasteleria-avanzada">
+							<Link
+								className={`dropdown-item ${
+									isLight ? "dropdown-item-light" : "dropdown-item-dark"
+								}`}
+								to="/recetas/pasteleria-avanzada"
+							>
 								Pasteleria Avanzada
 							</Link>
 						</ul>
@@ -123,7 +138,6 @@ export const Navbar = () => {
 						uncheckedIcon={false}
 						onColor="#f5f5f5"
 						offColor="#000"
-						
 					/>
 				</div>
 			</ul>
