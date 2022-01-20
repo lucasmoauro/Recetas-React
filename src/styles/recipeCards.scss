@@ -36,7 +36,7 @@
 
 	cursor: pointer;
 	&-light {
-		background-color: #fafafa;
+		background-color: #ececec;
 		border: 1px solid #ccc;
 		box-shadow: rgba(0, 0, 0, 0.226) 2px 2px 4px,
 			rgba(0, 0, 0, 0.26) 4px 4px 6px;
@@ -57,7 +57,7 @@
 		transition: all 0.75s ease-in-out;
 		&:hover {
 			transform: scale(1.05);
-			color: darken($color: #fff, $amount: 50%);
+			color: darkgoldenrod;
 			box-shadow: rgba(184, 115, 11, 0.548) 2px 2px 4px,
 				rgba(184, 115, 11, 0.158) 4px 4px 4px;
 			cursor: pointer;

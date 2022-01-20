@@ -139,12 +139,15 @@
 
 .theme-switch{
 
+	filter: drop-shadow(rgba(27, 27, 27, 0.384) 0px 1px 1px);
 
 
 	@media screen and (min-width: $large) {
 		
 		position: absolute;
-		right: 0;
+		right: 7rem;
+		top: 1rem;
+
 		
 	}
 }
