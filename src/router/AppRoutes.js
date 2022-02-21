@@ -26,6 +26,7 @@ export const AppRoutes = () => {
 				<Route exact path="/recetas/:id" element={<RecipesListScreen />} />
 				<Route exact path="/receta/:id" element={<RecipeScreen />} />
 				<Route path="/" element={<HomeScreen />} />
+				<Route path="/*" element={<HomeScreen />} />
 			</Routes>
 		</Suspense>
 	);
